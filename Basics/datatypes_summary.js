@@ -56,3 +56,25 @@ console.log(typeof anotherId);
 
 
 //javascript is statically typed or dynamically typed?
+//give the answer of this question
+
+//******************/
+// Stack (Primitive) --> gives the copy of the variable , Heap(Non-Primitive)-->gives the reference of the original value like pointers.
+
+let myYoutubeName = "madhavYoutube";
+let anotherName = myYoutubeName;
+
+anotherName = "chaiaurcode";
+console.log(anotherName);
+console.log(myYoutubeName);
+
+
+let user1 = {//here it stores the object into the heap memory
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let user2 = user1;//it gives the reference of the user1(address of the user1 from the heap)
+user2.email = "email@gmail.com";
+
+console.log(user1);

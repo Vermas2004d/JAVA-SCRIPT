@@ -11,7 +11,7 @@
 //but the ecma is the orginal standards//
 
 
-let name  = "hitesh";
+let name1  = "hitesh";
 let age = 18;
 let isLoggedIn = false;
 
@@ -27,6 +27,6 @@ let isLoggedIn = false;
 // object
 
 
-console.log(typeof(name));
+console.log(typeof name1);
 console.log(typeof undefined);
 //Note: see the specification on the ecma standards

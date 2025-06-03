@@ -27,7 +27,7 @@ console.log(JsUser.age);
 console.log(JsUser["lastLoginDays"]);
 // console.log(JsUser."fullName");--gives the error
 // console.log( JsUser.mySym)//string but we wants the symbol
-console.log( JsUser[mySym])//here it is work like an symbol
+console.log(JsUser[mySym])//here it is work like an symbol
 console.log(typeof mySym)//symbol
 
 JsUser.email = "madhav@chatgpt.com";

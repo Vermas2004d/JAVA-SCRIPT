@@ -63,7 +63,7 @@ console.log(Object.entries(tinderUser));//it gives the key value paired array
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 //to check the property before using it//
 
-
+ 
 
 
 

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: #414141; color:aliceblue;">
+
+    <h2>Amazing videos</h2>
+    <div>
+        <ul id="images" style="background-color: red;">
+            <li><img id="owl" width="200px" style="background-color: blue;" src="mountain.jpg" alt="mountain"></li>
+            
+
+        </ul>
+    </div>
+    
+</body>
+
+<script>
+    // document.getElementById('owl').onlclick = function(){
+    //     alert("owl clicked");
+        //gives the less features
+    // }
+    //in the earlier times we have the :
+    //attachEvent()
+    //jQuery - on
+
+    document.getElementById('owl').addEventListener('click' , function(e){
+        //e is the event object
+        // alert("owl clicked again");
+        console.log(e);
+    } , true)
+    //type , timestamp , defaultPrevented
+    //target , toElement , srcElement , currentTarget,
+    //clientX , clientY , screenX , screenY
+    //altkey , ctrlkey , shiftkey , keyCode
+
+    //Event proprogation: 
+    // 1.Event bubbling (default: false) // moving from the bottom to top(child to parent element)//
+    // 2.Event capturing(true)//moving from the top to bottom like(parent to child)
+
+    //Example for the event propogation:
+
+    // document.getElementById('images').addEventListener('click', function(){
+    //     console.log('clicked inside the url');
+    // } , false)
+    // //we can also write the true instead of false , then it becomes the 
+    // //event capturing
+
+
+    // document.getElementById('owl').addEventListener('click' , function(e){
+    //     console.log('owl clicked');
+    //     e.stopPropagation();
+    // } , false);
+
+
+    // //in case of the anchor tags:
+    // document.getElementById('google').addEventListener('click' , function(e){
+    //     e.preventDefault();
+    //     console.log('google clicked');
+    // } , false)
+
+
+    document.querySelector('#images').addEventListener('click' , function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+
+        let removeIt = e.target.parentNode
+        // removeIt.remove(); --> in this if we are clicking on list item then it's parent is ul so
+        //the entire list will be delted if we click on any list item.
+        
+    })
+    // removeIt.parentNode.removeChild(removeIt);
+    
+
+
+
+
+
+
+</script>
+</html>
